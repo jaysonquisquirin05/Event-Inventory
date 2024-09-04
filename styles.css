@@ -1,0 +1,400 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.page-header {
+    background: #007bff;
+    color: white;
+    border-bottom: 1px solid #0056b3;
+    padding: 20px;
+    text-align: center;
+    position: flex;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 24px;
+    flex-grow: 1; /* Allows the title to take up the remaining space */
+}
+
+
+/* Sidebar Styling */
+.left-sidebar {
+    width: 250px;
+    background: #343a40;
+    color: #f8f9fa;
+    padding: 20px;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    bottom: 0;
+    height: calc(100% - 80px);
+    box-sizing: border-box;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow-y: auto;
+    transition: width 0.3s ease;
+}
+
+.left-sidebar.collapsed {
+    width: 60px; /* Collapsed width */
+}
+
+.left-sidebar h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.left-sidebar.collapsed h2,
+.left-sidebar.collapsed .nav-list li a span {
+    display: none; /* Hide text when collapsed */
+}
+
+.left-sidebar {
+    width: 250px;
+    background: #343a40; /* Darker background for sidebar */
+    color: #f8f9fa; /* Light text color */
+    padding: 20px;
+    position: fixed;
+    top: 0px; /* Start below the header */
+    left: 0;
+    height: 100%; /* Fit below the header */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: width 0.3s; /* Smooth transition for sidebar width */
+}
+
+.left-sidebar h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #fff;
+}
+
+/* Account Profile Styling */
+.account-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #495057;
+}
+
+.left-sidebar.collapsed .account-profile {
+    flex-direction: column;
+}
+
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.left-sidebar.collapsed .profile-picture {
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+
+.account-name {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style-type: none; /* Remove default bullet points */
+    text-decoration: none;
+    font-size: 30px;
+    display: block;
+    padding: 10px;
+    border-radius: 100%; /* Rounded corners for better look */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+}
+
+
+.nav-list li {
+    margin-bottom: 15px;
+}
+
+.nav-list a {
+    color: #dee2e6; /* Light gray text */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px; /* Add padding for better spacing */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    background: #495057; /* Subtle highlight background */
+    color: #ffffff; /* White text on hover */
+}
+
+
+.main-content {
+    margin-left:auto; /* Width of the sidebar */
+    padding: 100px;
+    width: calc(100% - 250px);
+}
+.main-content h2{
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+h1 {
+    margin: 0;
+    color: #333;
+    font-size: 28px;
+    font-weight: 600; /* Slightly bolder title */
+} 
+
+.module-content {
+    padding: 10px;
+    background-color: #444;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.module-content p {
+    margin: 0;
+    font-size: 16px;
+    color: #ddd;
+}
+
+.main-content {
+    margin-left: 250px; /* Width of the sidebar */
+    padding: 20px;
+    width: calc(100% - 250px);
+    box-sizing: border-box; /* Ensures padding and width work together */
+}
+
+h1{
+    text-align: center;
+    color: #333;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #f9f9f9;
+    padding: 20px;
+    width: 22%;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    margin: 0 0 10px 0;
+    color: #666;
+}
+
+.card p {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+.chart-container {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.form-container {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    
+
+}
+
+input[type="text"],
+input[type="number"],
+button {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.actions button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.actions button:hover {
+    background-color: #c9302c;
+}
+
+/* Add the following styles For the Calendar.html */
+
+.task-form {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-form h3 {
+    margin-top: 0;
+}
+
+.task-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.task-form input {
+    width: 97%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.task-form button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.task-form button:hover {
+    background: #0056b3;
+}
+
+/* Add the following styles For the Settings.html */
+.settings-section {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.settings-section h3 {
+    margin-top: 0;
+}
+
+.settings-section label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.settings-section input,
+.settings-section select {
+    width: 97%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    
+}
+
+.settings-section button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.settings-section button:hover {
+    background: #0056b3;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .left-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+        left: 0;
+        box-shadow: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding-top: 100px; /* Adjust for header height */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .page-header h1 {
+        font-size: 20px;
+    }
+
+    .nav-list a {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .settings-section button {
+        font-size: 14px;
+    }
+}

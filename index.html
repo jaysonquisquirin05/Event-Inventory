@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class ="page-header">Equipment Inventory Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Equipment Inventory System</h1>
+    </header>
+
+    <div class="left-sidebar">
+        <!-- Account Profile Section -->
+        <div class="account-profile">
+            <img src="blank-profile-picture.png" alt="Profile Picture" class="profile-picture"
+                width="80px" 
+                height="80px">
+            <p class="account-name">John Doe</p>
+        </div>
+        <!-- Navigation -->
+        <h2>Navigation</h2>
+        <ul class="nav-list">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="items.html">Items</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            
+        </ul>
+    </div>
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2>Equipment Inventory Dashboard</h2>
+            
+            <div class="dashboard">
+                <div class="card">
+                    <h2>Total Equipment</h2>
+                    <p id="totalEquipment">0</p>
+                </div>
+                <div class="card">
+                    <h2>Total Quantity</h2>
+                    <p id="totalQuantity">0</p>
+                </div>
+                <div class="card">
+                    <h2>Good Condition</h2>
+                    <p id="goodCondition">0</p>
+                </div>
+                <div class="card">
+                    <h2>Needs Repair</h2>
+                    <p id="needsRepair">0</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="conditionChart"></canvas>
+            </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
